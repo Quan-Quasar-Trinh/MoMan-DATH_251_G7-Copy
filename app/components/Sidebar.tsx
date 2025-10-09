@@ -28,50 +28,53 @@ export default function Sidebar() {
 
     return (
         <>  
-            <div className="hidden lg:block lg:w-[250px] h-full md:bg-[#FBFDFF] flex-col items-center fixed left-0 top-0">
-                <Image src="/logo.png" alt="Logo" width={430} height={430} className='absolute top-[-100px] left-[-20px]' />
-                <div className='absolute top-[100px] flex flex-col pl-4'>
-                    <ul className='flex flex-col gap-y-[25px] mb-8'>
-                        <li className='w-[200px] pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
+            <div className="hidden lg:flex lg:w-[250px] h-full md:bg-[#FBFDFF] flex-col items-center fixed left-0 top-0 overflow-y-auto">
+                {/* <Image src="/logo.png" alt="Logo" width={430} height={430} className='absolute top-[-100px] left-[-20px]' /> */}
+                <div className='w-full h-[70px] bg-orange-950 mb-4'>
+                    
+                </div>
+                <div className='w-full flex flex-col flex-1'>
+                    <ul className='max-h-[300px] flex flex-col gap-y-[25px] pl-4 mb-8'>
+                        <li className='w-full pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
                             <Image src="/home.png" alt="Home Icon" width={36} height={36} className='mr-2' />
-                            <div className='text-[19px] font-bold'>Home</div>
+                            <div className='text-[19px] font-bold dark:text-[rgb(23,23,23)]'>Home</div>
                         </li>
-                        <li className='w-[200px] pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
+                        <li className='w-full pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
                             <Image src="/category.png" alt="Category Icon" width={36} height={36} className='mr-2' />
-                            <div className='text-[19px] font-bold'>Category</div>
+                            <div className='text-[19px] font-bold dark:text-[rgb(23,23,23)]'>Category</div>
                         </li>
-                        <li className='w-[200px] pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
+                        <li className='w-full pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
                             <Image src="/calendar.png" alt="Scheduler Icon" width={36} height={36} className='mr-2' />
-                            <div className='text-[19px] font-bold'>Scheduler</div>
+                            <div className='text-[19px] font-bold dark:text-[rgb(23,23,23)]'>Scheduler</div>
                         </li>
-                        <li className='w-[200px] pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
+                        <li className='w-full pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
                             <Image src="/chart.png" alt="Report Icon" width={36} height={36} className='mr-2' />
-                            <div className='text-[19px] font-bold'>Report</div>
+                            <div className='text-[19px] font-bold dark:text-[rgb(23,23,23)]'>Report</div>
                         </li>
                     </ul>
-                    <div className='flex flex-col gap-y-2.5 mb-4'>
-                        <div className='text-[26px] font-bold pl-2'>Expense</div>
-                        <ul className='flex flex-col gap-y-[25px] h-[200px] overflow-y-auto'>
+                    <div className='max-h-[265px] flex flex-col gap-y-2.5 pl-4 mb-8'>
+                        <div className='text-[26px] font-bold pl-2 dark:text-[rgb(23,23,23)]'>Expense</div>
+                        <ul className='flex flex-col gap-y-[25px] overflow-y-auto'>
                             {expenses.map((category) => (
-                                <li key={category.id} className='w-[200px] pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
+                                <li key={category.id} className='w-full pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
                                     <Image src={category.icon} alt="Money Icon" width={36} height={36} className='mr-2' />
-                                    <div className='text-[19px] font-bold'>{category.name}</div>
+                                    <div className='text-[19px] font-bold dark:text-[rgb(23,23,23)]'>{category.name}</div>
                                 </li>
                             ))}
                         </ul>
                     </div>
-                    <div className='flex flex-col gap-y-2.5'>
-                        <div className='text-[26px] font-bold pl-2'>Income</div>
-                        <ul className='flex flex-col gap-y-[25px] h-[200px] overflow-y-auto'>
+                    <div className='max-h-[265px] flex flex-col gap-y-2.5 pl-4 mb-8'>
+                        <div className='text-[26px] font-bold pl-2 dark:text-[rgb(23,23,23)]'>Income</div>
+                        <ul className='flex flex-col gap-y-[25px] overflow-y-auto'>
                             {incomes.map((category) => (
-                                <li key={category.id} className='w-[200px] pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
+                                <li key={category.id} className='w-full pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
                                     <Image src={category.icon} alt="Money Icon" width={36} height={36} className='mr-2' />
-                                    <div className='text-[19px] font-bold'>{category.name}</div>
+                                    <div className='text-[19px] font-bold dark:text-[rgb(23,23,23)]'>{category.name}</div>
                                 </li>
                             ))}
                         </ul>
                     </div>
-                    <div className='flex justify-center'>
+                    <div className='flex flex-1 justify-center items-end mb-8'>
                         <button className='w-[150px] h-[60px] bg-[rgba(235,106,99,0.91)] hover:bg-[rgba(235,106,99,1)] cursor-pointer rounded-[20px] text-white font-semibold text-[20px]'>
                             Log Out
                         </button>
