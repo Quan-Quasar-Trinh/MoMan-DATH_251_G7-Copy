@@ -81,9 +81,11 @@ export default function Sidebar() {
                     </div>
                 </div>
             </div>
-            <div className='lg:hidden w-full h-[70px] flex items-center justify-between relative'>
-                <Image src="/logo.png" alt="Logo" width={200} height={200} className='cursor-pointer absolute top-[-85px] left-[-60px]' />
-                <ul className='absolute right-[40px] flex gap-x-[10px] md:gap-x-[20px] items-center'>
+            <div className='lg:hidden w-full h-[70px] flex items-center justify-between'>
+                <div className='w-1/5 h-[70px] bg-orange-950'>
+                    
+                </div>
+                <ul className='flex gap-x-[10px] md:gap-x-[20px] items-center pr-4'>
                     <li 
                         key={1} className='size-[40px] md:size-[50px] flex items-center justify-center cursor-pointer bg-[rgba(226,229,233,0.5)] hover:bg-[rgba(226,229,233,0.8)] rounded-full relative'
                         onMouseEnter={() => {
