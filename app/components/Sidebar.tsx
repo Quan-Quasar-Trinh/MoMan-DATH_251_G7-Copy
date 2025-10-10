@@ -27,60 +27,12 @@ export default function Sidebar() {
 
 
     return (
-        <>  
-            <div className="hidden lg:block lg:w-[250px] h-full md:bg-[#FBFDFF] flex-col items-center fixed left-0 top-0">
-                <Image src="/logo.png" alt="Logo" width={430} height={430} className='absolute top-[-100px] left-[-20px]' />
-                <div className='absolute top-[100px] flex flex-col pl-4'>
-                    <ul className='flex flex-col gap-y-[25px] mb-8'>
-                        <li className='w-[200px] pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
-                            <Image src="/home.png" alt="Home Icon" width={36} height={36} className='mr-2' />
-                            <div className='text-[19px] font-bold'>Home</div>
-                        </li>
-                        <li className='w-[200px] pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
-                            <Image src="/category.png" alt="Category Icon" width={36} height={36} className='mr-2' />
-                            <div className='text-[19px] font-bold'>Category</div>
-                        </li>
-                        <li className='w-[200px] pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
-                            <Image src="/calendar.png" alt="Scheduler Icon" width={36} height={36} className='mr-2' />
-                            <div className='text-[19px] font-bold'>Scheduler</div>
-                        </li>
-                        <li className='w-[200px] pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
-                            <Image src="/chart.png" alt="Report Icon" width={36} height={36} className='mr-2' />
-                            <div className='text-[19px] font-bold'>Report</div>
-                        </li>
-                    </ul>
-                    <div className='flex flex-col gap-y-2.5 mb-4'>
-                        <div className='text-[26px] font-bold pl-2'>Expense</div>
-                        <ul className='flex flex-col gap-y-[25px] h-[200px] overflow-y-auto'>
-                            {expenses.map((category) => (
-                                <li key={category.id} className='w-[200px] pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
-                                    <Image src={category.icon} alt="Money Icon" width={36} height={36} className='mr-2' />
-                                    <div className='text-[19px] font-bold'>{category.name}</div>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className='flex flex-col gap-y-2.5'>
-                        <div className='text-[26px] font-bold pl-2'>Income</div>
-                        <ul className='flex flex-col gap-y-[25px] h-[200px] overflow-y-auto'>
-                            {incomes.map((category) => (
-                                <li key={category.id} className='w-[200px] pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
-                                    <Image src={category.icon} alt="Money Icon" width={36} height={36} className='mr-2' />
-                                    <div className='text-[19px] font-bold'>{category.name}</div>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className='flex justify-center'>
-                        <button className='w-[150px] h-[60px] bg-[rgba(235,106,99,0.91)] hover:bg-[rgba(235,106,99,1)] cursor-pointer rounded-[20px] text-white font-semibold text-[20px]'>
-                            Log Out
-                        </button>
-                    </div>
+        <>
+            <div className='lg:hidden w-full h-[70px] flex items-center justify-between'>
+                <div className='w-1/5 h-[70px] bg-orange-950'>
+                    
                 </div>
-            </div>
-            <div className='lg:hidden w-full h-[70px] flex items-center justify-between relative'>
-                <Image src="/logo.png" alt="Logo" width={200} height={200} className='cursor-pointer absolute top-[-85px] left-[-60px]' />
-                <ul className='absolute right-[40px] flex gap-x-[10px] md:gap-x-[20px] items-center'>
+                <ul className='flex gap-x-[10px] md:gap-x-[20px] items-center pr-4'>
                     <li 
                         key={1} className='size-[40px] md:size-[50px] flex items-center justify-center cursor-pointer bg-[rgba(226,229,233,0.5)] hover:bg-[rgba(226,229,233,0.8)] rounded-full relative'
                         onMouseEnter={() => {
@@ -165,6 +117,58 @@ export default function Sidebar() {
                         )}
                     </div>
                 </ul>
+            </div>
+            <div className="hidden lg:flex lg:w-[250px] h-full md:bg-[#FBFDFF] flex-col items-center absolute left-0 top-0 overflow-y-auto">
+                <div className='w-full h-[70px] bg-orange-950 mb-4'>
+                    
+                </div>
+                <div className='w-full flex flex-col flex-1'>
+                    <ul className='max-h-[300px] flex flex-col gap-y-[25px] pl-4 mb-8'>
+                        <li className='w-full pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
+                            <Image src="/home.png" alt="Home Icon" width={36} height={36} className='mr-2' />
+                            <div className='text-[19px] font-bold dark:text-[rgb(23,23,23)]'>Home</div>
+                        </li>
+                        <li className='w-full pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
+                            <Image src="/category.png" alt="Category Icon" width={36} height={36} className='mr-2' />
+                            <div className='text-[19px] font-bold dark:text-[rgb(23,23,23)]'>Category</div>
+                        </li>
+                        <li className='w-full pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
+                            <Image src="/calendar.png" alt="Scheduler Icon" width={36} height={36} className='mr-2' />
+                            <div className='text-[19px] font-bold dark:text-[rgb(23,23,23)]'>Scheduler</div>
+                        </li>
+                        <li className='w-full pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
+                            <Image src="/chart.png" alt="Report Icon" width={36} height={36} className='mr-2' />
+                            <div className='text-[19px] font-bold dark:text-[rgb(23,23,23)]'>Report</div>
+                        </li>
+                    </ul>
+                    <div className='max-h-[265px] flex flex-col gap-y-2.5 pl-4 mb-8'>
+                        <div className='text-[26px] font-bold pl-2 dark:text-[rgb(23,23,23)]'>Expense</div>
+                        <ul className='flex flex-col gap-y-[25px] overflow-y-auto'>
+                            {expenses.map((category) => (
+                                <li key={category.id} className='w-full pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
+                                    <Image src={category.icon} alt="Money Icon" width={36} height={36} className='mr-2' />
+                                    <div className='text-[19px] font-bold dark:text-[rgb(23,23,23)]'>{category.name}</div>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className='max-h-[265px] flex flex-col gap-y-2.5 pl-4 mb-8'>
+                        <div className='text-[26px] font-bold pl-2 dark:text-[rgb(23,23,23)]'>Income</div>
+                        <ul className='flex flex-col gap-y-[25px] overflow-y-auto'>
+                            {incomes.map((category) => (
+                                <li key={category.id} className='w-full pl-[8px] pr-[4px] py-[4px] flex items-center cursor-pointer hover:bg-[#CFF0E7] hover:rounded-[10px]'>
+                                    <Image src={category.icon} alt="Money Icon" width={36} height={36} className='mr-2' />
+                                    <div className='text-[19px] font-bold dark:text-[rgb(23,23,23)]'>{category.name}</div>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className='flex flex-1 justify-center items-end mb-8'>
+                        <button className='w-[150px] h-[60px] bg-[rgba(235,106,99,0.91)] hover:bg-[rgba(235,106,99,1)] cursor-pointer rounded-[20px] text-white font-semibold text-[20px]'>
+                            Log Out
+                        </button>
+                    </div>
+                </div>
             </div>
         </>
     )
