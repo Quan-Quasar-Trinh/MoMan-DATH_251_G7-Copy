@@ -118,7 +118,7 @@ export default function Sidebar() {
                     </div>
                 </ul>
             </div>
-            <div className="hidden lg:flex lg:w-[250px] h-full md:bg-[#FBFDFF] flex-col items-center absolute left-0 top-0 overflow-y-auto">
+            <div className="hidden lg:flex lg:w-[260px] h-full md:bg-[#FBFDFF] flex-col items-center absolute left-0 top-0 overflow-y-auto">
                 <div className='w-full h-[70px] bg-orange-950 mb-4'>
                     
                 </div>
