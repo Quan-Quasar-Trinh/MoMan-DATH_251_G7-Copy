@@ -98,7 +98,7 @@ export default function FoodnDrink() {
   }, [isEditMode, transactions]);
 
   return (
-    <div className="flex lg:ml-[250px] w-full items-center justify-center">
+    <div className="flex lg:ml-[260px] w-full items-center justify-center">
       <div className="flex flex-col items-center min-h-screen gap-8 p-4 w-full lg:max-w-[95%]">
         {/* Header */}
         <div className="flex flex-col w-full gap-4 select-none">
