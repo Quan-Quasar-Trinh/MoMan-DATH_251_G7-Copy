@@ -1,7 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import TransactionButton from "../components/TransactionButton";
-import { useCategories } from "../context/CategoryContext";
+import TransactionButton from "@/app/components/TransactionButton";
+import { useCategories } from "@/app/context/CategoryContext";
 
 export default function FoodnDrink() {
   const months = [

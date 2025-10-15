@@ -7,8 +7,8 @@ import {
   useEffect,
   ReactNode,
 } from "react";
-import { Category, Transaction } from "../model";
-import { expenseCategories, incomeCategories } from "../store/CategoryStore";
+import { Category, Transaction } from "@/app/model";
+import { expenseCategories, incomeCategories } from "@/app/(main)/store/CategoryStore";
 
 interface CategoryContextType {
   userExpenseCategories: Category[];

@@ -1,8 +1,8 @@
 "use client"
 
 import Image from 'next/image'
-import { expenseCategories, incomeCategories } from '../store/CategoryStore'
-import { Category } from '../model'
+import { expenseCategories, incomeCategories } from '@/app/(main)/store/CategoryStore'
+import { Category } from '@/app/model'
 import { useEffect, useRef, useState } from 'react'
 
 export default function Sidebar() {

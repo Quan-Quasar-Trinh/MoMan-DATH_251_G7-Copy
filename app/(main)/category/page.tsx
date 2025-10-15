@@ -1,9 +1,9 @@
 "use client";
 import { useState, useRef } from "react";
 import Image from "next/image";
-import { Category } from "../model";
-import TransactionButton from "../components/TransactionButton";
-import { useCategories } from "../context/CategoryContext";
+import { Category } from "@/app/model";
+import TransactionButton from "@/app/components/TransactionButton";
+import { useCategories } from "@/app/context/CategoryContext";
 
 interface CategoryItemProps {
   category: Category;

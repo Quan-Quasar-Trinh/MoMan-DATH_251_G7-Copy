@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import { useCategories } from "../context/CategoryContext";
-import { Transaction } from "../model";
+import { useCategories } from "@/app/context/CategoryContext";
+import { Transaction } from "@/app/model";
 
 export default function TransactionButton() {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,4 +1,4 @@
-import { Category } from "../model";
+import { Category } from "@/app/model";
 
 export const expenseCategories: Category[] = [
     { id: 1, type: "expense", name: "Food & Drink", icon: "/food&drink.png", isDefault: true },
